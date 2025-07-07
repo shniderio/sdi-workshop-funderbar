@@ -10,21 +10,22 @@
 // to help guide you toward success in your work on the following exercises.
   _.define = function(input){
     // Declare a variable below that is assigned the value of input;
-    var result = FILL_ME_IN;
+    var result = input;
     // return the above variable
-    return FILL_ME_IN;
+    return result;
   }
 
 //_.dataType is wanting you to determine the data type of what is being passed into it.
 // Return the datatype of input: ie. string or number or boolean etc. 
 _.dataType = function(input){
   //Code Goes Below
-
+    return typeof(input);
 }
 
 //_.sum takes two numbers as parameters and returns their sum
 _.sum = function(a,b){
     //Code Goes Below
+    return a + b;
     
 }
 
@@ -33,12 +34,14 @@ _.subtract = function(a,b){
   //Code Goes Below
   //For your code remember to subtract b from a
   //a - b
+  return a - b; 
   
 }
 
 //_.multiply takes two numbers as parameters and returns their product
 _.multiply = function(a,b){
   //Code Goes Below
+  return a * b;
   
 }
 
@@ -46,6 +49,7 @@ _.multiply = function(a,b){
 _.divide = function(a,b){
   //Code Goes Below
   //a divided by b
+  return a / b;
   
 }
 
@@ -53,12 +57,14 @@ _.divide = function(a,b){
 _.remainderOperator = function(a,b){
   //Code Goes Below
   //return the remainder of a divided by b
+  return a % b;
 }
 
 //_.increment takes a number as a parameter and increces it by 1
 // Ensure you use the proper increment operator(not a+1)
 _.increment = function(a){
   //Code Goes Below
+  return a += 1;
   
 }
 
