@@ -34,7 +34,7 @@ _.subtract = function(a,b){
   //Code Goes Below
   //For your code remember to subtract b from a
   //a - b
-  return a - b; 
+  return a-b; 
   
 }
 
@@ -113,7 +113,11 @@ _.lessThan = function(a,b){
 //_.falsyOrTruthy takes a parameter and determines whether it is TRUTHY or FALSY
 _.falsyOrTruthy = function(a){
    //Code Goes Below
-  return !!a;
+  if (!a){
+    return true;
+  }else{
+    return false;
+  }
 }
 
   //In the next tests you will be given four parameters to compare, sort of.
@@ -231,7 +235,6 @@ _.falsyOrTruthy = function(a){
       }else if (b === 'number'){
         return _.forIfElseNum(a)
       }
-
     }
 
     //PART III
@@ -245,19 +248,27 @@ _.falsyOrTruthy = function(a){
 
     _.objectCreationBracket = (a,b,c) =>{
       //Code Goes Below
-
+      let obj={};
+      obj['firstName'] = a;
+      obj['lastName'] = b;
+      obj['zord'] = c;
+      return obj;
     }
 
     //Below you will be building a function that creates an object using dot notation (.). Within the function create and return an object. 
 
     _.objectCreationDot = (a,b,c) =>{
       //Code Goes Below
-
+      let obj={};
+      obj.firstName = a;
+      obj.lastName = b;
+      obj.zord = c;
+      return obj;
     }
 
     _.objectValue = (a,b) => {
       //Code Goes Below
-      
+      return a[b];
     }
     
 
@@ -269,7 +280,13 @@ _.falsyOrTruthy = function(a){
     //Loop through the given array and return the total sum of all the numbers in the array. 
     _.forOf = (a) => {
       //Code Goes Below
-      
+      let stuff = 0;
+      for (var x of a){
+        if (typeof x === 'number'){
+          stuff += x;
+        }
+      }
+      return stuff;
     }
 
     //Loop through the given object and return an array of keys from the object. 
@@ -277,13 +294,21 @@ _.falsyOrTruthy = function(a){
     //example array.push(value)
     _.forInKeys = (a) =>{
       //Code Goes Below
-      
+      var stuff = [];
+      for (var x in a){
+        stuff.push(x)
+      }
+      return stuff;
     }
 
     //Loop through the given object and return an array of values from the object. 
     //This is similar to the above function but needs a little digging to get the value. 
     _.forInValues = (a) =>{
       //Code Goes Below
-      
+      var stuff = [];
+      for (var x in a) {
+        stuff.push(a[x]);
+      }
+      return stuff;
     }
 }());
