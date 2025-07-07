@@ -72,6 +72,7 @@ _.increment = function(a){
 // Ensure you use the proper decrement operator (not a-1)
 _.decrement = function(a){
   //Code Goes Below
+  return a -= 1;
   
 }
 
